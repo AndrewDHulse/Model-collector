@@ -4,6 +4,7 @@
 <h1>Model List</h1>
 
 {% for my_model in my_models %}
+<a href="{% url 'detail' my_model.id %}">
   <div class="card">
     <div class="card-content">
       <span class="card-title">{{ my_model.name }}</span>
@@ -11,6 +12,7 @@
       <p>Line: {{ my_model.line }}</p>
     </div>
   </div>
+</a>
 {% endfor %}
 
 {% endblock %}
